@@ -19,7 +19,7 @@
 
     --Very-dark-grayish-blue: hsl(237, 12%, 33%);
     --Dark-grayish-blue: hsl(240, 6%, 50%);
-    
+
     --Light-grayish-blue: hsl(240, 5%, 91%);
 }
 
@@ -27,15 +27,17 @@ html, body {
     min-height: 100vh;
 
 }
+
 body {
-    
+
     background-image: linear-gradient(var(--Soft-violet), var(--Soft-blue));
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .faqCard {
-    box-shadow: 0px 17px 18px 0px rgba(0,0,0,0.21);
+    box-shadow: 0px 17px 18px 0px rgba(0, 0, 0, 0.21);
     margin: 6rem;
     position: relative;
     border-radius: 2rem;
@@ -47,17 +49,20 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "img txt";
 }
+
 .faqCard__imgContainer {
     overflow: hidden;
     position: relative;
 }
+
 .faqCard__img {
     position: absolute;
     top: 50px;
     left: -80px;
     object-fit: cover;
-    
+
 }
+
 .faqCard__patternImg {
     position: absolute;
     width: 513px;
@@ -68,29 +73,35 @@ body {
 
 
 .faqCard__CubeImg {
-    
+
     position: absolute;
     top: 190px;
     left: -110px;
     animation: cube 1.5s infinite alternate;
 }
+
 @keyframes cube {
-    0% {transform:translate(0, 1%);}
-    100% {transform:translate(0, 5%);}
-    
+    0% {
+        transform: translate(0, 1%);
+    }
+
+    100% {
+        transform: translate(0, 5%);
+    }
+
 }
 
 
 .faqCard__section {
-    
+
     justify-content: space-between;
     padding: 4rem;
     grid-area: txt;
     display: flex;
     flex-direction: column;
     gap: 6rem;
-    
-    
+
+
 }
 
 .faqCard__title {
@@ -103,12 +114,14 @@ body {
     height: 100%;
     max-height: 525px;
     gap: 1rem;
-    
+
 }
+
 .answer {
     padding: 1rem 0rem;
     color: var(--Dark-grayish-blue);
 }
+
 .questionSection {
     transition: .5s;
     position: relative;
@@ -123,7 +136,7 @@ body {
 .question {
     color: var(--Very-dark-desaturated-blue);
     font-size: 1.2rem;
-    
+
 }
 
 .question:hover {
@@ -142,42 +155,49 @@ body {
     height: 20px;
     text-align: center;
 }
+
 .questionSection:target {
     max-height: 90px;
-    
+
 }
+
 .questionSection:target .question::after {
     top: -5px;
     transform: scaleY(-1);
-    
+
 }
+
 .questionSection:target .question {
     font-weight: bold;
-    
+
 }
+
 .questionSection:target .question:hover {
     color: var(--Very-dark-desaturated-blue);
 }
 
 .faqCard__imgContainer {
     grid-area: img;
-    
+
 }
 
 @media (max-width: 900px) {
     .faqCard {
         margin: 1rem;
         height: 550px;
-        grid-template-areas: 
-        "img img"
-        "txt txt";
+        grid-template-areas:
+            "img img"
+            "txt txt";
     }
+
     .faqCard__title {
         text-align: center;
     }
+
     .faqCard__section {
         padding: 2rem;
     }
+
     .faqCard__img {
         top: -100px;
         left: 50%;
@@ -185,13 +205,15 @@ body {
         max-width: 230px;
         width: 100%;
     }
+
     .faqCard__imgContainer {
         height: 100px;
         padding: 0rem 1rem;
         overflow: visible;
         width: 100%;
-        
+
     }
+
     .faqCard__patternImg {
         top: -120px;
         left: 50%;
@@ -200,6 +222,7 @@ body {
         width: 100%;
         animation: none;
     }
+
     .faqCard__CubeImg {
         max-width: 100px;
         width: 100%;
@@ -208,9 +231,10 @@ body {
         transform: translate(-130%);
         animation: none;
     }
+
     .questionSection:target {
         max-height: 100px;
-        
+
     }
-    
-}   
+
+}
